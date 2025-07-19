@@ -4,6 +4,8 @@ import FollowingPage from "../pages/FollowingPage";
 import WritePage from "../pages/WritePage";
 import HomePage from "../pages/HomePage";
 import LandingPage from "../pages/LP";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const AppRoutes = () => {
   return (
@@ -13,6 +15,8 @@ const AppRoutes = () => {
       <Route path="/for-you" element={<ForYouPage />} />
       <Route path="/following" element={<FollowingPage />} />
       <Route path="/write" element={<WritePage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       {/* a catch-all for 404 Not Found */}
       <Route
         path="*"

@@ -109,33 +109,36 @@ const Navbar = () => {
             </Button>
             {/* Clerk's UserButton handles user profile, sign out, etc. */}
             {/* This remains as Clerk's component, not our custom Button */}
-            <UserButton afterSignOutUrl="/" />
+            <UserButton />
           </SignedIn>
 
           <SignedOut>
-            {" "}
             {/* Renders only if the user is signed out */}
             <div className="flex items-center space-x-4">
               {/* Clerk's SignInButton - pass our Button component as a child for styling */}
-              <SignInButton mode="modal">
-                <Button
-                  variant="ghost"
-                  size="medium"
-                  className="text-gray-700 hover:text-purple-600"
-                >
-                  Sign In
-                </Button>
+              <SignInButton>
+                <Link to="login">
+                  <Button
+                    variant="ghost"
+                    size="medium"
+                    className="text-gray-700 hover:text-purple-600"
+                  >
+                    Sign In
+                  </Button>
+                </Link>
               </SignInButton>
 
               {/* Clerk's SignUpButton - pass our Button component as a child for styling */}
-              <SignUpButton mode="modal">
-                <Button
-                  variant="primary"
-                  size="medium"
-                  className="bg-gray-800 hover:bg-gray-900 text-white"
-                >
-                  Get started
-                </Button>
+              <SignUpButton>
+                <Link to="register">
+                  <Button
+                    variant="primary"
+                    size="medium"
+                    className="bg-gray-800 hover:bg-gray-900 text-white"
+                  >
+                    Get started
+                  </Button>
+                </Link>
               </SignUpButton>
             </div>
           </SignedOut>

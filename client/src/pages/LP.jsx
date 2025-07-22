@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
+import { useUser } from "@clerk/clerk-react";
 
 const LandingPage = () => {
+  const { isSignedIn, isLoaded } = useUser();
+
+  // Prevent flash: wait until Clerk is fully loaded
+  if (!isLoaded) return null;
+
+  // Redirect signed-in users
+  if (isSignedIn) return <Navigate to="/home" replace />;
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 font-sans antialiased">
       {/* Hero Section - Ultra Modern */}

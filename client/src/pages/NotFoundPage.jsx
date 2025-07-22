@@ -15,7 +15,7 @@ const NotFoundPage = () => {
           Oops! It looks like you've ventured into uncharted territory. The page
           you're looking for might have been moved, deleted, or never existed.
         </p>
-        <Link to="/">
+        <Link to="/home">
           <Button
             variant="primary"
             size="large"

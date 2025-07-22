@@ -1,20 +1,8 @@
 // src/pages/HomePage.jsx
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
-import axios from "axios";
-import { useEffect, useState } from "react";
 
 const HomePage = () => {
-  // const [articles, setArticles] = useState([]);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:5000/api/articles")
-  //     .then((res) => {
-  //       setArticles(res.data);
-  //     })
-  //     .catch((err) => console.error("Fetch error:", err));
-  // }, []);
   // Dummy data for articles and topics
   const featuredArticle = {
     id: 1,
